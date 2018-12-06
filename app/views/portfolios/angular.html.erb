@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Portfolio Items</h1>
+<h1>Angular Portfolio Items</h1>
 <%= link_to "Create New Item", new_portfolio_path %>
 
 <% if false %>
@@ -12,7 +12,7 @@
 	</p>
 <% end %>
 
-<% @portfolio_items.each do |portfolio_item| %>
+<% @angular_portfolio_items.each do |portfolio_item| %>
 	<p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
 	<p><%= portfolio_item.subtitle %></p>
 	<p><%= portfolio_item.body %></p>

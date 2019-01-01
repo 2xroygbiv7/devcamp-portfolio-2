@@ -105,6 +105,7 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+  text-align: center;
 }
 
 /*
@@ -123,3 +124,16 @@ body {
 .register-text {
   text-align: right;
  }
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+

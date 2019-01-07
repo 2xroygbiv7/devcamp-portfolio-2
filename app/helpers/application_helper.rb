@@ -17,6 +17,6 @@ module ApplicationHelper
 	end
 
 	def copyright_generator
-		PdViewTool::Renderer.copyright 'Patrick Dunn', 'All rights reserved'
+		PdViewTool::Renderer.copyright 'Patrick Dunn, ', 'All rights reserved'
 	end
 end

@@ -1,8 +1,5 @@
-
-<div class="col-md-4">
+<div class="col-md-4" data-id="<%= portfolio_item.id %>">
 	<div class="card mb-4 shadow-sm">
-		<!--
-			<img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap"-->
 		<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
 		<div class="card-body">
 			<p class="card-text">

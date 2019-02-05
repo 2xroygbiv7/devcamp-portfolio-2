@@ -1,4 +1,4 @@
-<%= form_with(model: blog, local: true) do |form| %>
+<%= form_with(model: blog, local: true) do |f| %>
   <% if blog.errors.any? %>
     <% blog.errors.full_messages.each do |error| %>
       <%= alert_generator error %>
@@ -6,34 +6,25 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.text_field :title, class: 'form-control', placeholder: 'Title'%>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title'%>
   </div>
 
   <div class="form-group">
-    <%= form.text_area :body, class: 'form-control', rows: 10, placeholder: 'Content' %>
+    <%= f.label :topic_id %>
+    <%= f.collection_select(:topic_id, Topic.all, :id, :title, 
+                          {
+                            selected: blog.topic_id,
+                            include_blink: true
+                          },
+                          class: 'form-control'
+                        ) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :body, class: 'form-control', rows: 10, placeholder: 'Content' %>
   </div>
 
   <div class="form_group">
-    <%= form.submit "Submit", class: 'btn btn-primary' %>
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-
-<!--
-<%= form_tag(blogs_path) do %>
-  <div class="form-group">
-    <%= label_tag 'blog[title]', 'Blog Title' %>
-    <%= text_field_tag 'blog[title]', blog.title, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= label_tag 'blog[body]', 'Blog Content' %>
-    <%= text_area_tag 'blog[body]', blog.body, class: 'form-control', rows: 15 %>
-  </div>
-
-  <div class="form-group">
-    <%= submit_tag 'Save', class: 'btn btn-primary' %>
-  </div>
-
-<% end %>
--->

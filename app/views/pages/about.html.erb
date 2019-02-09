@@ -8,7 +8,28 @@
 			<div class="col-md-4">
 
 				<%= image_tag "bp_profile_image", size: "280x280", alt: "Profile Image", class: 'profile-image' %>
+			
+				<div class="skills">
+					<div class="skill">
+						<% @skills.each do |skill| %>
+							<h5><%= skill.title %></h5>
+							<div class="progress">
+								<div 
+									class="progress-bar progress-bar-striped bg-warning"
+									role="progressbar"
+									aria-valuenow="<%=skill.percent_utilized%>"
+									aria-valuemax="100"
+									style="width: <%=skill.percent_utilized%>%;"
+								></div>
+							</div>
+						<% end %>
+					</div>
+				</div>
 			</div>
+
+			
+
+
 			<div class="col-md-8">
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis commodo odio aenean sed adipiscing. Morbi tristique senectus et netus et malesuada fames. Commodo nulla facilisi nullam vehicula ipsum a. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. In hac habitasse platea dictumst. Proin fermentum leo vel orci. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Lacus laoreet non curabitur gravida arcu ac.

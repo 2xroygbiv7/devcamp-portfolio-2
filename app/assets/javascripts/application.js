@@ -19,6 +19,11 @@
 //= require html5sortable
 //= require cocoon
 //= require gritter
+//= require typed
+//= require typed_sentence
+
+
+
 //= require activestorage
 //= require cable
 //= require turbolinks

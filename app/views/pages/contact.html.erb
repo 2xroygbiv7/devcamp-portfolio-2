@@ -8,15 +8,24 @@
 
 				<h3>Location</h3>
 
-				<p>7 Centennial Ave, Lane Cove West NSW</p>
+				<p>
+					7 Centennial Ave, Lane Cove<br>
+				  NSW, 2066 AUSTRALIA
+				</p>
 
+				<!--
 				<h3>Phone</h3>
 
-				<p><%= number_to_phone("+61 414 909 593", pattern: /(\d{2})(\d{4})(\d{4})$/, :delimiter => " ", area_code: true) %></p>
-
+				<p><%= number_to_phone(
+																"123456789", 
+																pattern: /(\d{3})(\d{3})(\d{3})$/, 
+																delimiter: " ", 
+																country_code: "61"
+																) %></p>
+				-->
 				<h3>Email</h3>
 
-				<p><a href="mailto:patrick@theonevehicle.com?subject=PortfolioContact" "email me">Email me</a></p>
+				<p><a href="mailto:inquiry@theonevehicle.com?subject=PortfolioContact" "email me">Email me</a></p>
 
 			</div>
 
